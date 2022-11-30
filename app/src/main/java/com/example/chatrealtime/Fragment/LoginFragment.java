@@ -43,7 +43,7 @@ public class LoginFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")){
+                if (charSequence.toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")){
                     inputEditEmail.setError("Email is not matches (example:a@gmail.com");
                 }
                 else {

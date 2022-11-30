@@ -1,27 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/bg_input"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Fragment.PhoneFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.hbb20.CountryCodePicker
-        android:layout_marginStart="10dp"
-        app:ccp_defaultPhoneCode="84"
-        android:id="@+id/code_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.google.android.material.textfield.TextInputEditText
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Phone"
-        android:inputType="phone"
-        android:id="@+id/text_edit_phone"
+    <LinearLayout
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_input"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+        <com.google.android.material.card.MaterialCardView
+            app:cardCornerRadius="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/vietnam"
+                android:id="@+id/image_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_marginStart="10dp"
+            android:text="asdbjasd"
+            android:id="@+id/txt_code_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_input"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.hbb20.CountryCodePicker
+            app:ccpDialog_showFlag="false"
+            app:ccp_showFullName="false"
+            app:ccp_showFlag="false"
+            app:ccp_showNameCode="false"
+            android:layout_marginStart="10dp"
+            app:ccp_defaultPhoneCode="84"
+            android:id="@+id/code_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:maxLength="10"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:id="@+id/text_edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
 
 </LinearLayout>
