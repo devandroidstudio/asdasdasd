@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bottom_chat"
+        android:title="Chat"
+        android:icon="@drawable/chat"/>
+    <item android:id="@+id/bottom_contact"
+        android:title="Contact"
+        android:icon="@drawable/contact"/>
+    <item android:id="@+id/bottom_apps"
+        android:title="Discover"
+        android:icon="@drawable/application"/>
+    <item android:id="@+id/bottom_account"
+        android:title="Account"
+        android:icon="@drawable/ic_baseline_person_outline_24"/>
+
+
+
+
+</menu>

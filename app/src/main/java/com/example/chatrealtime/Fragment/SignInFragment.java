@@ -8,6 +8,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.chatrealtime.Adapter.RootAdapter;
@@ -28,6 +30,7 @@ public class SignInFragment extends Fragment {
 
     ViewPager2 viewPager2;
     TabLayout tabLayout;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -55,6 +58,7 @@ public class SignInFragment extends Fragment {
                     break;
             }
         }).attach();
+
     }
 
 

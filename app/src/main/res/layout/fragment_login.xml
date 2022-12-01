@@ -58,6 +58,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_gravity="end"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/btxt_forget_password"
+        android:fontFamily="@font/alatsi"
+        android:textAllCaps="false"
+        android:textColor="#BDB7B7"
+        android:text="Forgot Password?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:textColor="@color/white"
+            android:text="Login"
+            android:background="#3560ff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
 </LinearLayout>

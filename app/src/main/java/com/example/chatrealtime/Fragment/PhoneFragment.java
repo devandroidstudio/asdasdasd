@@ -1,8 +1,11 @@
 package com.example.chatrealtime.Fragment;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
@@ -14,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chatrealtime.Model.ISendDataListener;
 import com.example.chatrealtime.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.hbb20.CountryCodePicker;
@@ -32,6 +36,8 @@ public class PhoneFragment extends Fragment {
     ImageView imageView;
     TextView textView;
     String codePhone;
+    AppCompatButton button;
+    ISendDataListener listener;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,6 +47,7 @@ public class PhoneFragment extends Fragment {
         imageView = view.findViewById(R.id.image_country);
         textView = view.findViewById(R.id.txt_code_phone);
         countryCodePicker.setImageViewFlag(imageView);
+        button = view.findViewById(R.id.btn_login_phone);
         codePhone = countryCodePicker.getTextView_selectedCountry().getText().toString();
 
 //        countryCodePicker.setTextView_selectedCountry(textView);
@@ -66,6 +73,23 @@ public class PhoneFragment extends Fragment {
                 }
             }
         });
+        Action();
         return view;
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        listener = (ISendDataListener) getActivity();
+        super.onAttach(context);
+
+    }
+
+    private void Action() {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.sendDataSignWithPhone(editTextPhone.getText().toString());
+            }
+        });
     }
 }
